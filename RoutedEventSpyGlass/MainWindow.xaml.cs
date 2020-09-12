@@ -1,19 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace RoutedEventSpyGlass
+namespace RoutedEventsSpyGlass
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -92,7 +82,7 @@ namespace RoutedEventSpyGlass
 
         private void FormatTextBox(RoutedEventArgs args, TextBlock tb, int width, string content)
         {
-            tb.FontFamily = FontFamily;
+            tb.FontFamily = fontfam;
             tb.Width = width;
             tb.Foreground = args.RoutedEvent.RoutingStrategy == RoutingStrategy.Bubble ? Brushes.Green : Brushes.Red;
             tb.Margin = new Thickness(40, 5, 40, 5);
